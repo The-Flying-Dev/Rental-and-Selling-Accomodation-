@@ -33,6 +33,7 @@ export default function SignUp() {
     try {
       // firebase docs
       const auth = getAuth();
+
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
       const user = userCredential.user;
@@ -42,7 +43,7 @@ export default function SignUp() {
       })
 
       //creates copy of from values and delets password before saving to Db
-      const formDataCopy = { ... formData }
+      const formDataCopy = { ...formData }
       delete formDataCopy.password
       formDataCopy.timestamp = serverTimestamp();
 
