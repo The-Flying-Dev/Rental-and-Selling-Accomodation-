@@ -11,6 +11,7 @@ export default function Profile() {
     setUser(auth.currentUser);
   }, []);
 
-  return user ? <h1>{user.displayName}</h1> : 'Not Logged In'
+
+  return user ? <div><h1>{user.displayName}</h1><p>{user.email}</p></div> : 'Not Logged In'
     
 }

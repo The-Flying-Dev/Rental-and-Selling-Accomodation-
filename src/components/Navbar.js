@@ -68,6 +68,40 @@ function Navbar() {
               Profile
             </p>
           </li>
+
+          <li className='navbarListItem' onClick={() => navigate('/sign-in')}>
+            <PersonOutlineIcon 
+              fill={pathMatchRoute('/sign-in') ? '#2c2c2c' : '#8f8f8f'}
+              width='36px'
+              height='36px'
+            />
+            <p 
+              className={
+                pathMatchRoute('/sign-in')
+                  ? 'nabarListItemNameActive'
+                  : 'navbarListItemName'
+              }
+            >
+              Sign in
+            </p>
+          </li>
+
+          <li className='navbarListItem' onClick={() => navigate('/sign-up')}>
+            <PersonOutlineIcon 
+              fill={pathMatchRoute('/sign-up') ? '#2c2c2c' : '#8f8f8f'}
+              width='36px'
+              height='36px'
+            />
+            <p 
+              className={
+                pathMatchRoute('/sign-up')
+                  ? 'nabarListItemNameActive'
+                  : 'navbarListItemName'
+              }
+            >
+              Sign Up
+            </p>
+          </li>
         </ul>
       </nav>
     </footer>
