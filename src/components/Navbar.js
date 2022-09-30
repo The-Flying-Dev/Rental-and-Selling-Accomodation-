@@ -17,8 +17,8 @@ function Navbar() {
   }
 
   return ( 
-    <nav className='navbar'>
-      <div className='navbarNav'>
+    <footer className='navbar'>
+      <nav className='navbarNav'>
         <ul className='navbarListItems'>
           <li className='navbarListItem' onClick={() => navigate('/')}>
             <ExploreIcon 
@@ -69,8 +69,8 @@ function Navbar() {
             </p>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </footer>
 
   )
 }

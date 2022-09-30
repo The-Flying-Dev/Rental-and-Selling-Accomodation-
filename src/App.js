@@ -10,8 +10,8 @@ import ForgotPassword from './pages/ForgotPassword';
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <>    
+      <Navbar />  
       <Routes>
         <Route path="/" element={<Explore />} />
         <Route path="/offers" element={<Offers />} />   
@@ -20,6 +20,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
+      
     </>
   );
 }

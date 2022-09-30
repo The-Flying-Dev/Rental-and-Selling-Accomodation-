@@ -141,11 +141,11 @@ button {
 }
 
 .navbar {
-  position: fixed;
+  margin-bottom: 5vh;
   left: 0;
   top: 0;
   right: 0;
-  height: 85px;
+  height: 85px;  
   background-color: #ffffff;
   z-index: 1000;
   display: flex;
