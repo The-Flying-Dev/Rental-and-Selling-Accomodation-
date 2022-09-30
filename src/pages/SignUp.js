@@ -20,10 +20,11 @@ export default function SignUp() {
 
   const navigate = useNavigate(); // initialize Hook
 
+  // captures form data for creating a new user
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
-      [e.target.id]: e.target.value,
+      [e.target.id]: e.target.value, 
     }))
   }
 
@@ -43,7 +44,7 @@ export default function SignUp() {
         displayName: name, // name used in form
       })
 
-      //creates copy of from values and delets password before saving to Db
+      //creates copy of form values and deletes password before saving to Db
       const formDataCopy = { ...formData }
       delete formDataCopy.password
       formDataCopy.timestamp = serverTimestamp();
