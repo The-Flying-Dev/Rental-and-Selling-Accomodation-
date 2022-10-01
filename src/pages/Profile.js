@@ -34,7 +34,7 @@ export default function Profile() {
         })
 
         // Update in firestore
-        // grabs item from the collection in firebase based on user uid and updates the value
+        // grabs item from the collection in firebase based on user id and updates the value
         const userRef = doc(db, 'users', auth.currentUser.uid)
         await updateDoc(userRef, {
           name,
