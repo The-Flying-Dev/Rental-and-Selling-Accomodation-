@@ -1,10 +1,10 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { useAuthStatus } from "../hooks/useAuthStatus";
-import Spinner from './Spinner';
+import Spinner from "./Spinner";
 
 // Outlet is profile page if logged in
 
-export const UnauthorizedRoute = () => {
+const UnauthorizedRoute = () => {
 
   const { loggedIn, checkingStatus } = useAuthStatus();
 
@@ -15,5 +15,7 @@ export const UnauthorizedRoute = () => {
   return loggedIn ? <Outlet /> : <Navigate to='/sign-in' />
 }
 
+
+export default UnauthorizedRoute;
 
 
