@@ -4,7 +4,7 @@ import { ReactComponent as EditIcon } from '../assets/svg/editIcon.svg'
 import bedIcon from '../assets/svg/bedIcon.svg'
 import bathtubIcon from '../assets/svg/bathtubIcon.svg'
 
-export default function ListingItem({ listing, id }) {
+export default function ListingItem({ listing, id, onEdit, onDelete }) {
 
   // grabs the first image from the array in firebase to display as a link to the item
   
@@ -53,15 +53,15 @@ export default function ListingItem({ listing, id }) {
         </div>
     </Link>
 
-    {/*onDelete && (
+    {onDelete && (
       <DeleteIcon
         className='removeIcon'
         fill='rgb(231, 76,60)'
         onClick={() => onDelete(listing.id, listing.name)}
       />
-    )*/}
+    )}
 
-    {/*onEdit && <EditIcon className='editIcon' onClick={() => onEdit(id)} />*/}
+    {onEdit && <EditIcon className='editIcon' onClick={() => onEdit(id)} />}
     </li>
   )
 }
