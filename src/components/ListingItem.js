@@ -20,7 +20,7 @@ export default function ListingItem({ listing, id }) {
           className='categoryListingImg'
         />
 
-        <div className='categoryListingDeatils'>
+        <div className='categoryListingDetails'>
           <p className='categoryListingLocation'>{listing.location}</p>
           <p className='categoryListingName'>{listing.name}</p>
 
