@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, query, where, orderBy, limit, startAfter } from 'firebase/firestore';
 import { db } from '../firebase.config';
-import Spinnner from '../components/Spinner';
+import Spinner from '../components/Spinner';
 import { toast } from 'react-toastify';
 import ListingItem from '../components/ListingItem'; 
 
@@ -34,7 +34,7 @@ export default function Category() {
         const querySnap = await getDocs(q);
 
         const lastVisible = querySnap.docs[querySnap.docs.length - 1]
-        setLastFetchedListing(lastFetchedListing)
+        setLastFetchedListing(lastVisible)
 
         const listings = [];
 

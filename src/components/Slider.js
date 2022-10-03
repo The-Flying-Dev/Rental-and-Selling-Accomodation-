@@ -48,7 +48,7 @@ export default function Slider() {
   }
 
   if (listings.length === 0) {
-    return<></>
+    return <></>
   }
 
   // loop through the destructured listings object and passes each item to SwiperSlide component

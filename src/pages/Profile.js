@@ -49,6 +49,7 @@ export default function Profile() {
       setListings(listings)
       setLoading(false)
     }
+    fetchUserListings()
   }, [auth.currentUser.uid])
 
 
@@ -88,7 +89,7 @@ export default function Profile() {
   }
 
   const onDelete = async (listingId) => {
-    if (window.confirm('Are you sure you want to delet?')) {
+    if (window.confirm('Are you sure you want to delete?')) {
       await deleteDoc(doc(db, 'listings', listingId))
       const updatedListings = listings.filter(
         (listing) => listing.id !== listingId
@@ -140,7 +141,7 @@ export default function Profile() {
             />
              <input 
               type='text'
-              id='name'
+              id='email'
               className={!changeDetails ? 'profileEmail' : 'profileEmailActive'}
               disabled={!changeDetails}
               value={email}
