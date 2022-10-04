@@ -10,7 +10,7 @@ import Spinner from '../components/Spinner'
 
 export default function CreateListing() {
   // eslint-disable-next-line
-  const [geolocationEnabled, setGeolocationEnabled] = useState(true)
+  const [geolocationEnabled, setGeolocationEnabled] = useState(false)
   const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
     type: 'rent',
@@ -28,6 +28,8 @@ export default function CreateListing() {
     longitude: 0,
   })
 
+
+  // destructured formData
   const {
     type,
     name,
@@ -92,6 +94,7 @@ export default function CreateListing() {
 
       const data = await response.json()
 
+      // id lat or lng is null then set data to 0
       geolocation.lat = data.results[0]?.geometry.location.lat ?? 0
       geolocation.lng = data.results[0]?.geometry.location.lng ?? 0
 
